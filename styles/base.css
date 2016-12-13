@@ -1,0 +1,30 @@
+body{
+ width: 960px;
+ margin: 0 auto;
+ background-image: url("https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg");
+}
+
+#logo {
+  float: left;
+  margin-bottom: 3%;
+  width: 25%;
+}
+
+#background_image {
+  background: url('https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg') cover no-repeat;
+}
+
+#designer_developer{
+  width: 800px;
+  margin: 0 auto;
+}
+
+nav ul{
+  display: inline;
+  float: left;
+  list-style: none;
+}
+p {
+  width: 860px;
+  margin: 30px auto;
+}
