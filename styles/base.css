@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding:0;
+  background-image: url("https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg");
+}
+
+nav ul{
+  background-color: white;
+  height: 100px;
+  width: 100%;
+  margin-top: 0;
+}
+
+nav ul li{
+  display: inline;
+  float: left;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+main{
+  background-color: white;
+  margin: 0 auto;
+}
+
+main #designer_developer{
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 80%;
+  max-width: 800px;
+}
+
+p {
+  width: 80%;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+#clearfix{
+  clear: both;
+}
+
+.icon-menu::before {
+	content: "\2630";
+}
+
+.icon-menu {
+  font-size: 2em;
+  text-align: right;
+  float: right;
+}
+
+.main-nav::hover ul{
+  display: block;
+}
+
+#logo {
+  margin: 4% 0 3% 3%;
+  width: 40%;
+  max-width: 400px;
+}
+
+.nav_button {
+  float: right;
+  margin-top: 40px;
+  padding-right: 5%;
+  font-size: 1em;
+}
+
+
+
+
+@media only screen and (min-width: 640px){
+  .icon-menu {
+    display: none;
+  }
+
+  .main-nav ul li {
+    display: inline-flex;
+  }
+
+  .main-nav:hover ul{
+    display: inline-flex;
+  }
+
+  .main-nav li{
+    margin-right: 1.5em;
+    padding: .5em 2em;
+  }
+}
+
+@media only screen and (min-width: 400px){
+
+
+}
