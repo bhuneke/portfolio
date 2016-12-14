@@ -30,8 +30,6 @@ blogArticles.forEach(function(ele) {
   articles.push(new Article(ele));
 });
 
-console.log(articles);
-
 articles.forEach(function(a) {
   $('#blog').append(a.toHtml());
 });

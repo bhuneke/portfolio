@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding:0;
+  min-width: 300px;
 }
 
 .background-image {
@@ -35,10 +36,7 @@ nav ul{
 }
 
 nav ul li{
-  display: inline;
-  float: left;
-  list-style: none;
-  font-family: sans-serif;
+  display: none;
 }
 
 main{
@@ -88,8 +86,9 @@ p {
 
 #logo {
   margin: 4% 0 3% 3%;
-  width: 60%;
-  max-width: 400px;
+  height: 40%;
+  max-height: 80px;
+  float: left;
 }
 
 .nav_button {
@@ -111,9 +110,16 @@ section.blog h1{
   display: none;
 }
 
-@media only screen and (min-width: 640px){
+@media only screen and (min-width: 700px){
   .icon-menu {
     display: none;
+  }
+
+  nav ul li{
+    display: inline;
+    float: left;
+    list-style: none;
+    font-family: sans-serif;
   }
 
   .main-nav ul li {
@@ -128,9 +134,4 @@ section.blog h1{
     margin-right: 1.5em;
     padding: .5em 2em;
   }
-}
-
-@media only screen and (min-width: 400px){
-
-
 }
