@@ -1,7 +1,31 @@
 body {
   margin: 0;
   padding:0;
-  background-image: url("https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg");
+  min-width: 300px;
+}
+
+.background-image {
+  background-image: url("../assets/japan_watercolor.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 380px;
+  width: 100%;
+}
+
+.footer-image {
+  background-image: url("../assets/japan_watercolor.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 60px;
+  width: 100%;
 }
 
 nav ul{
@@ -12,10 +36,7 @@ nav ul{
 }
 
 nav ul li{
-  display: inline;
-  float: left;
-  list-style: none;
-  font-family: sans-serif;
+  display: none;
 }
 
 main{
@@ -25,9 +46,17 @@ main{
 
 main #designer_developer{
   display: block;
-  margin: 0 auto;
+  margin: 30px auto;
   padding-top: 20px;
   width: 80%;
+  max-width: 800px;
+}
+
+main #triangle_placeholder {
+  display: block;
+  margin: 30px auto;
+  padding-top: 20px;
+  width: 100%;
   max-width: 800px;
 }
 
@@ -57,8 +86,9 @@ p {
 
 #logo {
   margin: 4% 0 3% 3%;
-  width: 40%;
-  max-width: 400px;
+  height: 40%;
+  max-height: 80px;
+  float: left;
 }
 
 .nav_button {
@@ -68,12 +98,28 @@ p {
   font-size: 1em;
 }
 
+section.blog {
+  font-family: sans-serif;
+}
 
+section.blog h1{
+  text-align: center;
+}
 
+.template {
+  display: none;
+}
 
-@media only screen and (min-width: 640px){
+@media only screen and (min-width: 700px){
   .icon-menu {
     display: none;
+  }
+
+  nav ul li{
+    display: inline;
+    float: left;
+    list-style: none;
+    font-family: sans-serif;
   }
 
   .main-nav ul li {
@@ -88,9 +134,4 @@ p {
     margin-right: 1.5em;
     padding: .5em 2em;
   }
-}
-
-@media only screen and (min-width: 400px){
-
-
 }

@@ -4,27 +4,48 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
     <title>Brigitte Huneke</title>
   </head>
   <body>
     <nav>
       <div class="icon-menu"></div>
+      <img id="logo" src="assets/brigitte_huneke.png" alt="Brigitte Huneke">
       <ul class="main-nav">
-        <li><img id="logo" src="assets/brigitte_huneke.png" alt="Brigitte Huneke"></li>
         <li class="nav_button">about</li>
         <li class="nav_button">my work</li>
         <li class="nav_button">my journey</li>
         <li></li>
       </ul>
     </nav>
-    <div id="clearfix">
-      <!--<img id="full_japan_image" src="assets/japan_watercolor.jpg">-->
+    <div class=background-image>
     </div>
     <main>
       <div>
         <img id="designer_developer" src="assets/designer_developer.png">
       </div>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div>
+        <img id="triangle_placeholder" src="assets/triangle_placeholder.png">
+      </div>
     </main>
+    <div class=footer-image>
+    </div>
+    <!--FOR CLASS ASSIGNMENTS-->
+    <section id="blog">
+      <h1>Blog</h1>
+      <article class="template" data-category="cat">
+        <header>
+          <h2>Title</h2>
+          <h4>Published: <time datetime="2000-01-01"></h4>
+        </header>
+        <section class="article-body"></section>
+      </article>
+    </section>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="scripts/blogArticles.js"></script>
+    <script type="text/javascript" src="scripts/articleS.js"></script>
   </body>
 </html>
