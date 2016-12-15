@@ -4,30 +4,6 @@ body {
   min-width: 300px;
 }
 
-.background-image {
-  background-image: url("../assets/japan_watercolor.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 380px;
-  width: 100%;
-}
-
-.footer-image {
-  background-image: url("../assets/japan_watercolor.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 60px;
-  width: 100%;
-}
-
 nav ul{
   background-color: white;
   height: 100px;
@@ -35,30 +11,16 @@ nav ul{
   margin-top: 0;
 }
 
-nav ul li{
+nav ul li {
   display: none;
 }
 
-main{
+main {
   background-color: white;
   margin: 0 auto;
 }
 
-main #designer_developer{
-  display: block;
-  margin: 30px auto;
-  padding-top: 20px;
-  width: 80%;
-  max-width: 800px;
-}
 
-main #triangle_placeholder {
-  display: block;
-  margin: 30px auto;
-  padding-top: 20px;
-  width: 100%;
-  max-width: 800px;
-}
 
 p {
   width: 80%;
@@ -70,15 +32,7 @@ p {
   clear: both;
 }
 
-.icon-menu::before {
-	content: "\2630";
-}
 
-.icon-menu {
-  font-size: 2em;
-  text-align: right;
-  float: right;
-}
 
 .main-nav::hover ul{
   display: block;

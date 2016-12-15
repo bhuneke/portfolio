@@ -1,0 +1,33 @@
+.background-image {
+  background-image: url("../assets/japan_watercolor.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 380px;
+  width: 100%;
+}
+
+.footer-image {
+  background-image: url("../assets/japan_watercolor.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 60px;
+  width: 100%;
+}
+
+.icon-menu::before {
+	content: "\2630";
+}
+
+.icon-menu {
+  font-size: 2em;
+  text-align: right;
+  float: right;
+}

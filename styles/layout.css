@@ -1,0 +1,15 @@
+main #designer_developer{
+  display: block;
+  margin: 30px auto;
+  padding-top: 20px;
+  width: 80%;
+  max-width: 800px;
+}
+
+main #triangle_placeholder {
+  display: block;
+  margin: 30px auto;
+  padding-top: 20px;
+  width: 100%;
+  max-width: 800px;
+}
