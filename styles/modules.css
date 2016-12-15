@@ -1,15 +1,4 @@
-.background-image {
-  background-image: url("../assets/japan_watercolor.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 380px;
-  width: 100%;
-}
-
+/*****  ALL  *****/
 .footer-image {
   background-image: url("../assets/japan_watercolor.jpg");
   -webkit-background-size: cover;
@@ -22,6 +11,19 @@
   width: 100%;
 }
 
+/*****  HOME  *****/
+.background-image {
+  background-image: url("../assets/japan_watercolor.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 380px;
+  width: 100%;
+}
+
 .icon-menu::before {
 	content: "\2630";
 }
@@ -29,5 +31,71 @@
 .icon-menu {
   font-size: 2em;
   text-align: right;
-  float: right;
+}
+
+.icon-menu:hover {
+  color: purple;
+}
+
+/*
+.line-divider {
+  height: 1px;
+  width: 100%;
+  background-color: purple;
+}
+*/
+
+#home #designer_developer {
+  width: 80%;
+  max-width: 800px;
+  padding-bottom: 20px;
+}
+
+#journey #designer_developer {
+  width: 60%;
+  max-width: 600px;
+}
+
+.journey_paragraph {
+  padding-top: 8%;
+  padding-bottom: 5%;
+}
+
+section {
+  background-color: white;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.article-heading, .date-heading{
+  text-indent: 5%;
+}
+
+p {
+  width: 80%;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.template {
+  display: none;
+}
+
+@media only screen and (min-width: 640px) {
+
+  .icon-menu {
+    display: none;
+  }
+
+  .nav_button {
+    list-style: none;
+    float: right;
+    margin-top: 65px;
+    padding-right: 5%;
+    font-size: 1em;
+  }
 }
