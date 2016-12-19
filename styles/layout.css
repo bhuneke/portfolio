@@ -14,15 +14,13 @@
   clear: both;
 }
 
-nav ul{
-  background-color: white;
-  height: 35px;
-  width: 100%;
-  margin-top: 0;
+nav ul {
+  display: none;
 }
 
 nav ul li {
-  display: none;
+  list-style: none;
+  display: inline;
 }
 
 .at-edge {
@@ -34,10 +32,9 @@ nav ul li {
   margin-top: 20px;
   height: 60px;
   max-height: 80px;
-  float: left;
 }
 
-#designer_developer{
+.designer_developer{
   display: block;
   margin: 30px auto;
   padding-top: 20px;
@@ -66,10 +63,10 @@ nav ul li {
   }
 
   nav ul{
-    background-color: white;
+    display: block;
     height: 100px;
-    width: 100%;
     margin-top: 0;
+    float: right;
   }
 
 }

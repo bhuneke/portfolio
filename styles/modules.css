@@ -30,13 +30,32 @@
 
 .icon-menu {
   font-size: 2em;
-  text-align: right;
+  float: right;
 }
 
 .icon-menu:hover {
   color: purple;
 }
 
+nav:hover .main-nav {
+  display: block;
+}
+
+nav {
+  position: relative;
+}
+
+nav ul {
+
+}
+/*.nav_button {
+  float: right;
+}*/
+
+.tab:hover, .tab:focus {
+  color: grey;
+  cursor: crosshair;
+}
 /*
 .line-divider {
   height: 1px;
@@ -45,13 +64,13 @@
 }
 */
 
-#home #designer_developer {
+#home .designer_developer {
   width: 80%;
   max-width: 800px;
   padding-bottom: 20px;
 }
 
-#journey #designer_developer {
+#journey .designer_developer {
   width: 60%;
   max-width: 600px;
 }
@@ -93,9 +112,8 @@ p {
 
   .nav_button {
     list-style: none;
-    float: right;
-    margin-top: 65px;
-    padding-right: 5%;
+    float: left;
+    margin: 65px 20px 0 0;
     font-size: 1em;
   }
 }

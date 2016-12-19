@@ -10,6 +10,10 @@ img {
   max-width: 100%;
 }
 
+nav{
+  background-color: white;
+}
+
 p {
   font-family: 'Cormorant Garamond', serif;
 }
@@ -18,14 +22,11 @@ a, a:link, a:active {
   text-decoration: none;
   color: black;
 }
+
 a:hover, a:focus {
   color: purple;
 }
 
-.tab:hover, .tab:focus {
-  color: grey;
-  cursor: crosshair;
-}
 
 @media only screen and (min-width: 640px){
 
