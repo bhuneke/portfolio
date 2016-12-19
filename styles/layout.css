@@ -1,0 +1,72 @@
+/*SMACS - base.css is for anything that is not going to change for the entire site (fonts, font-size, colors, etc),  layout.css is for positioning, and module.css is for anything that is going to change.*/
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav ul {
+  display: none;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline;
+}
+
+.at-edge {
+  margin-right: 20px;
+}
+
+#logo {
+  margin-left: 20px;
+  margin-top: 20px;
+  height: 60px;
+  max-height: 80px;
+}
+
+.designer_developer{
+  display: block;
+  margin: 30px auto;
+  padding-top: 20px;
+}
+
+#home #triangle_placeholder {
+  display: block;
+  margin: 30px auto;
+  padding-top: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+@media only screen and (min-width: 640px){
+
+  nav ul li {
+    display: inline;
+  }
+
+  #logo {
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 40%;
+    max-height: 80px;
+    float: left;
+  }
+
+  nav ul{
+    display: block;
+    height: 100px;
+    margin-top: 0;
+    float: right;
+  }
+
+}
