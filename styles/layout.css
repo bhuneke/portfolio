@@ -48,6 +48,53 @@ nav ul li {
   max-width: 800px;
 }
 
+.home-tri-container {
+  display: inline-block;
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  outline: 1px solid red;
+  position: relative;
+  padding: 0;
+
+}
+.tri-1, .tri-5 {
+  width: 25%;
+}
+
+.tri-3, .tri-4 {
+  width: 30%;
+}
+
+.tri-2 {
+  width: 20%;
+}
+
+.tri-1 {
+  position: absolute;
+  left: 15%;
+}
+
+.tri-2 {
+  position: absolute;
+  left: 30%;
+  bottom: 1%;
+}
+
+.tri-3 {
+  position: absolute;
+  left: 30%;
+}
+
+.tri-4 {
+  position: absolute;
+  left: 40%;
+}
+
+.tri-5 {
+  position: absolute;
+  left: 50%;
+}
 @media only screen and (min-width: 640px){
 
   nav ul li {

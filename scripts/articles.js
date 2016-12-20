@@ -10,16 +10,14 @@ function Article (opts) {
 }
 
 Article.prototype.toHtml = function() {
-  var $newArticle = $('article.template').clone();
-  $newArticle.find('.article-heading').html(this.title);
-  $newArticle.attr('data-category', this.category);
-  $newArticle.find('time[datetime]').attr('date', this.publishedOn);
-  $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000) + ' days ago');
-  $newArticle.find('section.article-body').html(this.body);
+  var source = $('#blog-template').html();
+  var template = Handlebars.compile(source);
 
-  $newArticle.removeAttr('class');
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000);
+  this.publishedStatus = this.publishedOn + 'published ' + this.daysAgo + ' days ago';
 
-  return $newArticle;
+  var html = template(this);
+  return html;
 };
 
 blogArticles.sort(function(curElem, nextElem) {
