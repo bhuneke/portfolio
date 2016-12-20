@@ -14,8 +14,21 @@ nav{
   background-color: white;
 }
 
+h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
 p {
   font-family: 'Cormorant Garamond', serif;
+  width: 80%;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+section {
+  background-color: white;
+  margin: 0 auto;
 }
 
 a, a:link, a:active {

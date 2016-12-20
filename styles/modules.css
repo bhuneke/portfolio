@@ -80,24 +80,8 @@ nav ul {
   padding-bottom: 5%;
 }
 
-section {
-  background-color: white;
-  margin: 0 auto;
-}
-
-h1 {
-  font-size: 2em;
-  text-align: center;
-}
-
 .article-heading, .date-heading{
   text-indent: 5%;
-}
-
-p {
-  width: 80%;
-  max-width: 800px;
-  margin: 30px auto;
 }
 
 .template {
