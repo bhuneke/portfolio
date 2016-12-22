@@ -16,3 +16,17 @@ view.handleLoad = function () {
 
 view.handleMainNav();
 view.handleLoad();
+
+var blogArticles;
+
+$.ajax('/data/blogArticles.json', {
+  method: 'GET',
+  success: function (response){
+    // console.log('success');
+    blogArticles = response;
+    Article.processData();
+  },
+  error: function (response, second, errorMessage){
+    // console.log('error');
+  }
+});
