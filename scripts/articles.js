@@ -13,7 +13,12 @@ Article.prototype.toHtml = function() {
   var template = Handlebars.compile(source);
 
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000);
-  this.publishedStatus = this.publishedOn + 'published ' + this.daysAgo + ' days ago';
+  if(this.daysAgo <= 1) {
+    this.publishedStatus = 'Published today';
+  } else {
+    this.publishedStatus = 'Published ' + this.daysAgo + ' days ago';
+  }
+
 
   var html = template(this);
   return html;
