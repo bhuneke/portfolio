@@ -1,4 +1,5 @@
 'use strict';
+
 (function(module) {
   function Article (opts) {
     this.title = opts.title;
