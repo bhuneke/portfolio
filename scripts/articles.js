@@ -1,13 +1,12 @@
 'use strict';
-
-var articles = [];
-
 function Article (opts) {
   this.title = opts.title;
   this.category = opts.category;
   this.publishedOn = opts.publishedOn;
   this.body = opts.body;
 }
+
+Article.articles = [];
 
 Article.prototype.toHtml = function() {
   var source = $('#blog-template').html();
@@ -20,14 +19,17 @@ Article.prototype.toHtml = function() {
   return html;
 };
 
-blogArticles.sort(function(curElem, nextElem) {
-  return (new Date(nextElem.publishedOn)) - (new Date(curElem.publishedOn));
-});
+Article.processData = function (){
+  console.log('blogArticles: ' + blogArticles);
+  blogArticles.sort(function(a,b) {
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  });
 
-blogArticles.forEach(function(ele) {
-  articles.push(new Article(ele));
-});
+  blogArticles.forEach(function(ele) {
+    Article.articles.push(new Article(ele));
+  });
 
-articles.forEach(function(a) {
-  $('#blog').append(a.toHtml());
-});
+  Article.articles.forEach(function(a) {
+    $('#blog').append(a.toHtml());
+  });
+};
