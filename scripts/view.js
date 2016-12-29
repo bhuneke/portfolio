@@ -1,32 +1,66 @@
 'use strict';
-var view = {};
+(function(module) {
+  var view = {};
+  view.handleCategoryFilter = function() {
+    $('#category-filter').on('change', function() {
+      if ($(this).val()) {
+        $('article').hide();
+        $('article[data-category="' + $(this).val() + '"]').fadeIn();
+      } else {
+        $('article').fadeIn();
+        $('article.template').hide();
+      }
+    });
+  };
 
-view.handleMainNav = function () {
-  $('.main-nav').on('click', '.tab', function() {
-    var whichTab = $(this).attr('data-content');
+  view.handleMainNav = function () {
+    $('.main-nav').on('click', '.tab', function() {
+      var whichTab = $(this).attr('data-content');
+      $('.tab-content').hide();
+      $('#' + whichTab).fadeIn();
+    });
+  };
+
+  view.handleLoad = function () {
     $('.tab-content').hide();
-    $('#' + whichTab).fadeIn();
-  });
-};
+    $('#home').fadeIn();
+  };
 
-view.handleLoad = function () {
-  $('.tab-content').hide();
-  $('#home').fadeIn();
-};
+  view.handleMainNav();
+  view.handleLoad();
 
-view.handleMainNav();
-view.handleLoad();
+  view.allCategories = function(a) {
+    return Article.articles.map(function(article){
+      return article.category; //.match(/\w+/g);
+    })
+    .reduce(function(acc, curr){
+      if (!acc.includes(curr)) {
+        acc.push(curr);
+      }
+      return acc;
+    }, []);
+  };
 
-var blogArticles;
+  view.populateFilters = function() {
+    view.allCategories().forEach(function(category){
+      console.log(category);
+      var optionTag = '<option value="' + category + '">' + category + '</option>';
+      console.log(optionTag);
+      if ($('#category-filter option[value="' + category + '"]').length === 0) {
+        $('#category-filter').append(optionTag);
+      }
+    });
+  };
 
-$.ajax('/data/blogArticles.json', {
-  method: 'GET',
-  success: function (response){
-    // console.log('success');
-    blogArticles = response;
-    Article.processData();
-  },
-  error: function (response, second, errorMessage){
-    // console.log('error');
-  }
-});
+  view.renderIndexPage = function() {
+    Article.articles.forEach(function(a) {
+      $('#blog').append(a.toHtml($('#article-template')));
+    });
+    view.populateFilters();
+    view.handleCategoryFilter();
+    view.handleMainNav();
+  };
+  module.view = view;
+})(window);
+
+Article.fetchAll(view.renderIndexPage);

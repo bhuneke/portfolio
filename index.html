@@ -18,6 +18,9 @@
         <section class="article-body">{{{body}}}</section>
       </article>
     </script>
+    <script id="category-filter-template" type="text/x-handlebars-template">
+      <option value="{{category}}">{{category}}</option>
+    </script>
   </head>
   <body>
 
@@ -68,6 +71,15 @@
         </div>
         <h1 class="blog-heading">my blog</h1>
         <!--<div class="line-divider"></div>-->
+        <div>
+          <ul id="filters">
+          <li>
+            <select id="category-filter">
+              <option value="">-- Filter by Category --</option>
+            </select>
+          </li>
+        </ul>
+      </div>
       </section>
       <!--<section id="work">
         <h1>Work</h1>
