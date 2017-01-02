@@ -31,7 +31,7 @@
 
   view.allCategories = function(a) {
     return Article.articles.map(function(article){
-      return article.category; //.match(/\w+/g);
+      return article.category;
     })
     .reduce(function(acc, curr){
       if (!acc.includes(curr)) {
@@ -40,12 +40,9 @@
       return acc;
     }, []);
   };
-
   view.populateFilters = function() {
     view.allCategories().forEach(function(category){
-      console.log(category);
       var optionTag = '<option value="' + category + '">' + category + '</option>';
-      console.log(optionTag);
       if ($('#category-filter option[value="' + category + '"]').length === 0) {
         $('#category-filter').append(optionTag);
       }
