@@ -29,9 +29,9 @@
         <img id="logo" src="assets/brigitte_huneke.png" alt="Brigitte Huneke">
         <div class="icon-menu at-edge"></div>
         <ul class="main-nav clearfix">
-          <li class="nav_button tab" data-content="home">home</li>
-          <li class="nav_button tab" data-content="journey">my journey</li>
-          <li class="nav_button tab clearfix" data-content="blog">my blog</li>
+          <li class="nav_button tab" data-content="home"><a href="/">home</a></li>
+          <li class="nav_button tab" data-content="journey"><a href="/myjourney">my journey</a></li>
+          <li class="nav_button tab clearfix" data-content="blog"><a href="/myblog">my blog</a></li>
         </ul>
       </nav>
     </header>
@@ -92,11 +92,18 @@
       <a href="https://github.com/bhuneke"><img class="social-logo" src="assets/logo-02.svg" alt="GitHub Logo"></a>
       <a href="https://www.linkedin.com/in/brigitte-huneke"><img class="social-logo" src="assets/logo-01.svg" alt="LinkedIn Logo"></a>
     </footer>
-
+    <!--Vendor CDNs-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
-    <!-- <script type="text/javascript" src="/scripts/blogArticles.js"></script> -->
-    <script type="text/javascript" src="/scripts/articles.js"></script>
-    <script type="text/javascript" src="/scripts/view.js"></script>
+    <!--Model Files-->
+    <script type="text/javascript" src="/scripts/models/articles.js"></script>
+    <!--View Files-->
+    <script type="text/javascript" src="/scripts/views/view.js"></script>
+    <!--Controller Files-->
+    <script src="/scripts/controllers/homeController.js"></script>
+    <script src="/scripts/controllers/journeyController.js"></script>
+    <script src="/scripts/controllers/blogController.js"></script>
+    <script src="/scripts/controllers/routes.js"></script>
   </body>
 </html>
