@@ -13,20 +13,20 @@
     });
   };
 
-  view.handleMainNav = function () {
-    $('.main-nav').on('click', '.tab', function() {
-      var whichTab = $(this).attr('data-content');
-      $('.tab-content').hide();
-      $('#' + whichTab).fadeIn();
-    });
-  };
+  // view.handleMainNav = function () {
+  //   $('.main-nav').on('click', '.tab', function() {
+  //     var whichTab = $(this).attr('data-content');
+  //     $('.tab-content').hide();
+  //     $('#' + whichTab).fadeIn();
+  //   });
+  // };
 
   view.handleLoad = function () {
     $('.tab-content').hide();
     $('#home').fadeIn();
   };
 
-  view.handleMainNav();
+  //view.handleMainNav();
   view.handleLoad();
 
   view.allCategories = function(a) {
@@ -55,7 +55,7 @@
     });
     view.populateFilters();
     view.handleCategoryFilter();
-    view.handleMainNav();
+    //view.handleMainNav();
   };
   module.view = view;
 })(window);
