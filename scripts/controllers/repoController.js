@@ -2,9 +2,9 @@
   var repoController = {};
 
   repoController.reveal = function() {
-    $('.tabcontent').hide();
-    $('#repos').show();
+    $('.tab-content').hide();
+    $('#repos').fadeIn();
   };
 
   module.repoController = repoController;
-}(window));
+})(window);

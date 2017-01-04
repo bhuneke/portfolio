@@ -21,6 +21,17 @@
     <script id="category-filter-template" type="text/x-handlebars-template">
       <option value="{{category}}">{{category}}</option>
     </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <p>Description: {{description}}</p>
+        <p>Primary Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last Updated: {{updated_at}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers}} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
   </head>
   <body>
 
@@ -32,7 +43,7 @@
           <li class="nav_button tab" data-content="home"><a href="/">home</a></li>
           <li class="nav_button tab" data-content="journey"><a href="/myjourney">my journey</a></li>
           <li class="nav_button tab" data-content="blog"><a href="/myblog">my blog</a></li>
-          <li class="nav_button tab clearfix" data-content="repos"><a href="/myrepos">my repos</a></li>
+          <li class="nav_button tab clearfix" data-content="repos"><a href="/myprojects">my projects</a></li>
         </ul>
       </nav>
     </header>
@@ -102,14 +113,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+    <!--Token Files-->
+    <script type="text/javascript" src="/scripts/token.js"></script>
     <!--Model Files-->
     <script type="text/javascript" src="/scripts/models/articles.js"></script>
+    <script src="/scripts/models/repo.js"></script>
     <!--View Files-->
     <script type="text/javascript" src="/scripts/views/view.js"></script>
+    <script src="/scripts/views/repoView.js"></script>
     <!--Controller Files-->
     <script src="/scripts/controllers/homeController.js"></script>
     <script src="/scripts/controllers/journeyController.js"></script>
     <script src="/scripts/controllers/blogController.js"></script>
+    <script src="/scripts/controllers/repoController.js"></script>
     <script src="/scripts/controllers/routes.js"></script>
   </body>
 </html>
