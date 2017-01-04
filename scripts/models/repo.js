@@ -14,10 +14,9 @@
           reposObj.allRepos.push(ele);
         });
         callback();
-        console.log('success');
+        console.log(response);
       },
       error: function(response) {
-        console.log('error');
       }
     });
   };
