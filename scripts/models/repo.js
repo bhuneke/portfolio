@@ -6,7 +6,7 @@
   reposObj.requestRepos = function(callback){
     $.ajax('https://api.github.com/user/repos', {
       method: 'GET',
-      data: {
+      query: {
         access_token: process.env.GITHUB_TOKEN
       },
       success: function (response) {
