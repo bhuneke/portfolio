@@ -3,29 +3,19 @@
 
   reposObj.allRepos = [];
 
-  reposObj.requestRepos = function(callback){
-    $.ajax('https://api.github.com/user/repos', {
-      method: 'GET',
-      query: {
-        access_token: process.env.GITHUB_TOKEN
-      },
-      success: function (response) {
-        response.forEach(function(ele) {
-          reposObj.allRepos.push(ele);
-        });
-        callback();
-        console.log(response);
-      },
-      error: function(response) {
-      }
-    });
+  reposObj.requestRepos = function(callback) {
+    $.get('/github/users/bhuneke/repos')
+          .done(function(data) {
+            reposObj.allRepos = data;
+          }).done(callback);
   };
 
-  reposObj.withTheAttribute = function(myAttr) {
+  reposObj.withTheAttribute = function(attr) {
+    console.log('allrepos' + reposObj.allRepos);
     return reposObj.allRepos.filter(function(aRepo) {
-      return aRepo[myAttr];
+      return aRepo[attr];
     });
   };
 
   module.reposObj = reposObj;
-}(window));
+})(window);
