@@ -7,7 +7,7 @@
     $.ajax('https://api.github.com/user/repos', {
       method: 'GET',
       data: {
-        access_token: token
+        access_token: process.env.GITHUB_TOKEN
       },
       success: function (response) {
         response.forEach(function(ele) {
