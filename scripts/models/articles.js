@@ -39,6 +39,14 @@
     }
   };
 
+  Article.findWhere = function(value, callback) {
+    var articlesByCategory = Article.articles.filter(function(article) {
+      return article.category === value;
+    });
+    callback(articlesByCategory);
+  };
+
+
   Article.getAll = function(nextFunction) {
     $.getJSON('/data/blogArticles.json', function(responseData) {
       Article.loadAll(responseData);
@@ -46,7 +54,6 @@
       nextFunction();
     });
   };
-
 
   module.Article = Article;
 })(window);

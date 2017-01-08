@@ -10,16 +10,18 @@
       ctx.articles = articlesByCategory;
       next();
     };
+
+    Article.findWhere(ctx.params.categoryName, categoryData);
   };
 
   blogController.loadAll = function(ctx, next) {
-    var articleData = function(allArticles) {
-      ctx.articles = Article.allArticles;
+    var articleData = function(articles) {
+      ctx.articles = Article.articles;
       next();
     };
 
-    if (Article.allArticles.length) {
-      ctx.articles = Article.allArticles;
+    if (Article.articles.length) {
+      ctx.articles = Article.articles;
       next();
     } else {
       Article.fetchAll(articleData);

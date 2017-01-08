@@ -1,10 +1,18 @@
-page('/', homeController.reveal);
-page('/myjourney', journeyController.reveal);
-page('/myblog', blogController.loadAll, blogController.index);
+page('/',
+  homeController.reveal);
 
-page('/category', '/');
+page('/myjourney',
+  journeyController.reveal);
 
-page('/category/:categoryName', blogController.loadByCategory, blogController.index);
+page('/myblog',
+  blogController.loadAll,
+  blogController.index);
 
-page('/myprojects', repoController.reveal);
+page('/category/:categoryName',
+  blogController.loadByCategory,
+  blogController.index);
+
+page('/myprojects',
+  repoController.reveal);
+
 page();
