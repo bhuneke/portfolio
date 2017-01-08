@@ -11,7 +11,6 @@
   };
 
   reposObj.withTheAttribute = function(attr) {
-    console.log('allrepos' + reposObj.allRepos);
     return reposObj.allRepos.filter(function(aRepo) {
       return aRepo[attr];
     });

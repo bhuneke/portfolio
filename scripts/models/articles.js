@@ -10,17 +10,6 @@
 
   Article.articles = [];
 
-  Article.prototype.toHtml = function() {
-    var source = $('#blog-template').html();
-    var template = Handlebars.compile(source);
-
-    this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000);
-    this.publishedStatus = this.daysAgo + ' days ago';
-
-    var html = template(this);
-    return html;
-  };
-
   Article.loadAll = function(passedData) {
     Article.articles = passedData.sort(function(a,b) {
       return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
@@ -50,6 +39,14 @@
     }
   };
 
+  Article.findWhere = function(value, callback) {
+    var articlesByCategory = Article.articles.filter(function(article) {
+      return article.category === value;
+    });
+    callback(articlesByCategory);
+  };
+
+
   Article.getAll = function(nextFunction) {
     $.getJSON('/data/blogArticles.json', function(responseData) {
       Article.loadAll(responseData);
@@ -57,7 +54,6 @@
       nextFunction();
     });
   };
-
 
   module.Article = Article;
 })(window);
